@@ -23,6 +23,32 @@ To enable powershell logging
 
 or by using SCCM/AD we can push the changes to entire organization.
 
+To enable script block logging:
+
+1.     In the “Windows PowerShell” GPO settings, set “Turn on PowerShell Script Block Logging” to enabled.
+
+Alternately, setting the following registry value will enable logging:
+
+»      HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging → EnableScriptBlockLogging = 1
+
+![](images/Capture4.JPG)
+
+To enable module logging:
+
+1.     In the “Windows PowerShell” GPO settings, set “Turn on Module Logging” to enabled.
+2.     In the “Options” pane, click the button to show Module Name.
+3.     In the Module Names window, enter * to record all modules.
+    a.     Optional: To log only specific modules, specify them here. (Note: this is not recommended.)
+4.     Click “OK” in the “Module Names” Window.
+5.     Click “OK” in the “Module Logging” Window.
+
+Alternately, setting the following registry values will have the same effect:
+
+»      HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging → EnableModuleLogging = 1
+»      HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging \ModuleNames → * = *
+
+![](images/Capture3.JPG)
+
 Script block logging : logs the complete script that is executed. Gets logged into PowerShell operational logs with Event ID 4104
 
 Module logging : Module logging records pipeline execution details as PowerShell executes, including variable initialization and command invocations. Module logging will record portions of scripts, some de-obfuscated code, and some data formatted for output. Module logging events are written to Event ID (EID) 4103.
