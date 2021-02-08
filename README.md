@@ -10,6 +10,7 @@ PowerShell events are written to the PowerShell operational log Microsoft-Window
 To enable powershell logging
 
 * Click on start button, search for edit group policy and click on edit group policy.
+
 ![](images/Capture.JPG)
 
 * Local Group Policy Editor window opens.
