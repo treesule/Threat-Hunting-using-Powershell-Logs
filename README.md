@@ -14,7 +14,13 @@ To enable powershell logging
 ![](images/Capture.JPG)
 
 * Local Group Policy Editor window opens.
+
+![](images/Capture1.JPG)
+
 * Administrative Templates -> Windows Components -> Windows PowerShell
+
+![](images/Capture2.JPG)
+
 or by using SCCM/AD we can push the changes to entire organization.
 
 Script block logging : logs the complete script that is executed. Gets logged into PowerShell operational logs with Event ID 4104
