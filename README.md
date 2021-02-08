@@ -7,6 +7,13 @@ PowerShell supports three types of logging:
 
 PowerShell events are written to the PowerShell operational log Microsoft-Windows-PowerShell%4Operational.evtx.
 
+To enable powershell logging
+
+* Click on start button, search for edit group policy and click on edit group policy.
+* Local Group Policy Editor window opens.
+* Administrative Templates -> Windows Components -> Windows PowerShell
+or by using SCCM/AD we can push the changes to entire organization.
+
 Script block logging : logs the complete script that is executed. Gets logged into PowerShell operational logs with Event ID 4104
 
 Module logging : Module logging records pipeline execution details as PowerShell executes, including variable initialization and command invocations. Module logging will record portions of scripts, some de-obfuscated code, and some data formatted for output. Module logging events are written to Event ID (EID) 4103.
